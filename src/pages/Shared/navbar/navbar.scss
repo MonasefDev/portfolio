@@ -1,0 +1,52 @@
+#navbar {
+  #nav-link {
+    border-right: 1px solid #1e2d3d;
+    @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
+  }
+
+  #nav-link-contact {
+    border-left: 1px solid #1e2d3d;
+    @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
+  }
+
+  #nav-link:hover,
+  #nav-link-contact:hover {
+    background-color: #1e2d3d74;
+    color: white;
+  }
+
+  #nav-logo {
+    border-right: 1px solid #1e2d3d;
+    @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
+  }
+
+  #nav-logo:hover {
+    background-color: #1e2d3d74;
+    color: white;
+  }
+
+  .active {
+    border-bottom: 2px solid #fea55f;
+    color: white;
+  }
+
+  #nav-logo.router-link-active {
+    border-right: 1px solid #1e2d3d;
+    border-bottom: none;
+    @apply text-menu-text;
+  }
+}
+
+#mobile-header {
+  border-bottom: 1px solid #1e2d3d;
+}
+
+#nav-link-mobile {
+  border-bottom: 1px solid #1e2d3d;
+  @apply flex items-center px-6 py-4 font-fira_retina text-menu-text;
+}
+#menu {
+  .active {
+    color: white;
+  }
+}
