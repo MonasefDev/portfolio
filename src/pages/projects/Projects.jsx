@@ -153,7 +153,7 @@ function Projects({ isMenuOpen }) {
               {filtredProject.map((project) => {
                 return (
                   <>
-                    <div key={project.id} id="project" className="lg:mx-5">
+                    <div key={project.id} className="lg:mx-5">
                       {/* <!-- title --> */}
                       <span className="my-3 flex text-base">
                         <h3 className="mr-3 font-bold text-purplefy">

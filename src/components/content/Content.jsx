@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Highlight from "react-highlight";
 import { useSelector } from "react-redux";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
+import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 function Content() {
   const { section, sectionInfo } = useSelector((state) => state.section);
@@ -11,6 +12,11 @@ function Content() {
     const [...info] = section.info.filter((info) => info.title === sectionInfo);
     setCurrentInfo(...info);
   }, [section, sectionInfo]);
+  const customTheme = {
+    background: "transparent",
+    fontSize: "16px",
+    width: "100%",
+  };
   return (
     <div id="left" className="border-right flex w-full flex-col">
       {/* <!-- windows tab desktop --> */}
@@ -36,11 +42,16 @@ function Content() {
         id="commented-text"
         className="lg:border-right flex h-full w-full overflow-hidden"
       >
-        <p className="ml-5 mr-10 h-full w-full overflow-scroll lg:my-5">
-          <Highlight innerHTML={true} className="" language="comment">
+        <div className="ml-5 mr-10 h-full w-full overflow-scroll lg:my-5">
+          <SyntaxHighlighter
+            language="javascript"
+            style={gradientDark}
+            customStyle={customTheme}
+            showLineNumbers
+          >
             {currentInfo.description}
-          </Highlight>
-        </p>
+          </SyntaxHighlighter>
+        </div>
 
         {/* <!-- scroll bar --> */}
         <div
