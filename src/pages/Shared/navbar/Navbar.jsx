@@ -1,8 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 
-import menuIcon from "../../../assets/icons/burger.svg";
-import closeIcon from "../../../assets/icons/burger-close.svg";
-
 import dev from "../../../developer.json";
 import "./navbar.scss";
 function Navbar({ isMenuOpen, setIsMenuOpen }) {
@@ -21,7 +18,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
           </Link>
           {isMenuOpen ? (
             <img
-              src={closeIcon}
+              src="../icons/burger-close.svg"
               onClick={() => {
                 setIsMenuOpen(false);
               }}
@@ -30,7 +27,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
             />
           ) : (
             <img
-              src={menuIcon}
+              src="../icons/burger.svg"
               onClick={() => {
                 setIsMenuOpen(true);
               }}

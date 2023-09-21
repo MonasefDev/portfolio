@@ -1,7 +1,17 @@
 import { Helmet } from "react-helmet";
 import dev from "../../developer.json";
 import "./home.scss";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { setSection, setSectionInfo } from "../../store/sectionSlice";
 function Home({ isMenuOpen }) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setSection(dev.about.sections[0]));
+    dispatch(setSectionInfo(dev.about.sections[0].info[0].title));
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -14,7 +24,7 @@ function Home({ isMenuOpen }) {
         <section className="hero">
           <div className="head">
             <span>Hi all, I am</span>
-            <h1 className="lg:text-5xl">{dev.name}</h1>
+            <h1 className="text-3xl lg:text-5xl">{dev.name}</h1>
             <h2>{`>${dev.role}`}</h2>
           </div>
 
@@ -41,7 +51,7 @@ function Home({ isMenuOpen }) {
         </section>
 
         <section data-aos="fade-up" className="game hidden lg:flex">
-          <div>Snake Game</div>
+          SnakeGame
         </section>
       </main>
     </>

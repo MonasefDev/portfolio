@@ -17,6 +17,7 @@ html {
   margin: 30px;
   font-family: "Fira Code Retina";
   font-size: 16px;
+  position: relative;
 }
 
 body {

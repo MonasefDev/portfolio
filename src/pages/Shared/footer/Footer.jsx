@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import twitterIcon from "../../../assets/icons/social/twitter.svg";
-import githubIcon from "../../../assets/icons/social/github.svg";
-import facebookIcon from "../../../assets/icons/social/facebook.svg";
 
 import dev from "../../../developer.json";
 import "./footer.scss";
@@ -26,7 +23,7 @@ function Footer() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <img src={twitterIcon} alt="social-icon" />
+            <img src="../icons/social/twitter.svg" alt="social-icon" />
           </Link>
           <Link
             to={
@@ -37,7 +34,7 @@ function Footer() {
             target="_blank"
             className="flex items-center justify-center"
           >
-            <img src={facebookIcon} alt="social-icon" />
+            <img src="../icons/social/facebook.svg" alt="social-icon" />
           </Link>
           <Link
             to={
@@ -48,7 +45,7 @@ function Footer() {
             target="_blank"
             className="flex items-center justify-center lg:hidden"
           >
-            <img src={facebookIcon} alt="social-icon" />
+            <img src="../icons/social/github.svg" alt="social-icon" />
           </Link>
         </div>
       </div>
@@ -58,10 +55,10 @@ function Footer() {
           dev.contacts.social.github.url + "/" + dev.contacts.social.github.user
         }
         target="_blank"
-        className="border-left hidden items-center px-5 md:flex"
+        className="border-left hidden min-w-[170px] items-center px-5 md:flex"
       >
         <div>@{dev.contacts.social.github.user}</div>
-        <img src={githubIcon} alt="social-icon" />
+        <img src="../icons/social/github.svg" alt="social-icon" />
       </Link>
     </footer>
   );

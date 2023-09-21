@@ -2,6 +2,24 @@
   #nav-link {
     border-right: 1px solid #1e2d3d;
     @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #fea55f;
+      height: 2px;
+      width: 0;
+      transition: all ease-in 0.3s;
+    }
+    &:hover {
+      /*   border-bottom: 2px solid #fea55f;
+    color: white; */
+      &::after {
+        width: 100%;
+      }
+    }
   }
 
   #nav-link-contact {
@@ -14,6 +32,19 @@
     background-color: #1e2d3d74;
     color: white;
   }
+  .active {
+    position: relative;
+    color: white !important;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #fea55f;
+      height: 2px;
+      width: 100%;
+    }
+  }
 
   #nav-logo {
     border-right: 1px solid #1e2d3d;
@@ -22,11 +53,6 @@
 
   #nav-logo:hover {
     background-color: #1e2d3d74;
-    color: white;
-  }
-
-  .active {
-    border-bottom: 2px solid #fea55f;
     color: white;
   }
 

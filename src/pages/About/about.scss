@@ -1,0 +1,47 @@
+.tab-height {
+  min-height: 35px;
+  max-height: 35px;
+}
+
+#tab-mobile {
+  padding: 25px 20px 0px 25px;
+  align-items: flex-end;
+}
+
+#scroll-bar {
+  width: 20px;
+}
+
+#scroll {
+  width: 14px;
+  height: 7px;
+  background-color: #607b96;
+}
+
+#diple {
+  @apply mx-3 w-2 max-w-fit;
+}
+
+.active {
+  color: white;
+  opacity: 1;
+}
+
+#left {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  #about {
+    min-height: stretch;
+  }
+}
+
+.section-arrow {
+  transition: 0.1s;
+}
+
+#section-content #contacts {
+  padding: 0px 25px;
+}
