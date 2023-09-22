@@ -28,7 +28,6 @@ export function useComments(url) {
           setError(err.message);
         }
       } finally {
-        console.log(comment);
         setIsLoading("fulfield");
       }
     }

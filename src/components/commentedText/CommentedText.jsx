@@ -9,7 +9,6 @@ function CommentedText({ text }) {
       const lineHeight = parseFloat(getComputedStyle(textElement).lineHeight);
       const lines = Math.ceil(elementHeight / lineHeight) + 1;
       setLineCount(lines);
-      console.log(lines);
     }
   };
   useLayoutEffect(() => {
