@@ -6,7 +6,6 @@ import "./codeSnippet.scss";
 
 function CodeSnippetgist({ KEY }) {
   const { gist, isLoading } = useGists(KEY);
-
   // const { comment, isLoading: isCommentLoading } = useComments(KEY);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +19,7 @@ function CodeSnippetgist({ KEY }) {
   }
   return (
     <>
-      {isLoading === "fulfield" && (
+      {!isLoading && (
         <div className="gist mb-5">
           {/* <!-- head info --> */}
           <div className="my-2 flex justify-between">
@@ -75,8 +74,10 @@ function CodeSnippetgist({ KEY }) {
               </div>
             </div>
           </div>
-
-          <Highlight className="snippet-container" language="javascript">
+          <Highlight
+            className="snippet-container javascript"
+            language="javascript"
+          >
             {Object.values(gist.files)[0].content}
           </Highlight>
 

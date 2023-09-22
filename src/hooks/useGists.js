@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export function useGists(KEY) {
   const [gist, setGist] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(function () {
@@ -10,7 +10,6 @@ export function useGists(KEY) {
 
     async function fetchGists() {
       try {
-        setIsLoading("loading");
         setError("");
 
         const res = await fetch(`https://api.github.com/gists/${KEY}`);
@@ -29,7 +28,7 @@ export function useGists(KEY) {
           setError(err.message);
         }
       } finally {
-        setIsLoading("fulfield");
+        setIsLoading(false);
       }
     }
     fetchGists();

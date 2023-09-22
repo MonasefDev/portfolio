@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import CommentedText from "../commentedText/CommentedText";
 
 function Content() {
   const { section, sectionInfo } = useSelector((state) => state.section);
 
   const [currentInfo, setCurrentInfo] = useState("");
-  console.log(currentInfo);
   useEffect(() => {
     const [...info] = section.info.filter((info) => info.title === sectionInfo);
     setCurrentInfo(...info);
@@ -43,14 +43,15 @@ function Content() {
         className="lg:border-right flex h-full w-full overflow-hidden"
       >
         <div className="ml-5 mr-10 h-full w-full overflow-scroll lg:my-5">
-          <SyntaxHighlighter
+          {/* <SyntaxHighlighter
             language="javascript"
             style={gradientDark}
             customStyle={customTheme}
             showLineNumbers
           >
             {currentInfo.description}
-          </SyntaxHighlighter>
+          </SyntaxHighlighter> */}
+          <CommentedText text={currentInfo.description} />
         </div>
 
         {/* <!-- scroll bar --> */}
