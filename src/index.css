@@ -77,7 +77,7 @@ main.page {
 /* MOBILE AND TABLET (SM - LG) */
 @media (max-width: 1024px) {
   html {
-    margin: 15px;
+    margin: 0;
     min-height: 100%;
     height: stretch;
     width: stretch;
@@ -87,6 +87,7 @@ main.page {
     @apply flex flex-col bg-blue-background;
     justify-content: space-between;
     height: auto;
+    border-radius: 0;
     min-height: stretch; /* This allows the page view for mobile to be full height when the content is less than the screen height. */
     width: 100%;
     width: auto;
