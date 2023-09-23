@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSectionInfo } from "../../store/sectionSlice";
+import { setSection, setSectionInfo } from "../../store/sectionSlice";
 
 function SectionInfo({ section, sectionOpen = false }) {
   const dispatch = useDispatch();
@@ -35,6 +35,7 @@ function SectionInfo({ section, sectionOpen = false }) {
               key={folder.title}
               onClick={() => {
                 dispatch(setSectionInfo(folder.title));
+                dispatch(setSection(section));
               }}
               className={`my-2 grid grid-cols-2 items-center font-fira_regular ${
                 currentSectionInfo === folder.title

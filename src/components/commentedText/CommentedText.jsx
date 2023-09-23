@@ -19,15 +19,18 @@ function CommentedText({ text }) {
   return (
     <div className="flex items-start font-fira_retina text-menu-text">
       <div className="hidden  flex-col text-right lg:flex">
-        {Array.from({ length: lineCount }, (_, i) => i + 1).map((line) => {
-          const comment = line === 1 ? "/**" : line === lineCount ? "**/" : "*";
-          return (
-            <div className="grid grid-cols-2 justify-start">
-              <span className="col-span-1 w-10 text-left">{line}</span>
-              <div className="col-span-1 flex justify-start">{comment}</div>
-            </div>
-          );
-        })}
+        {Array.from({ length: lineCount }, (_, i) => i + 1).map(
+          (line, index) => {
+            const comment =
+              line === 1 ? "/**" : line === lineCount ? "**/" : "*";
+            return (
+              <div key={index} className="grid grid-cols-2 justify-start">
+                <span className="col-span-1 w-10 text-left">{line}</span>
+                <div className="col-span-1 flex justify-start">{comment}</div>
+              </div>
+            );
+          },
+        )}
       </div>
 
       <div ref={ref} className="ml[-10px] w-full break-words text-base">
@@ -39,44 +42,3 @@ function CommentedText({ text }) {
 }
 
 export default CommentedText;
-
-/* 
-<script>
-
-export default {
-  props: {
-    text: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      lines: 0
-    };
-  },
-  mounted() {
-    this.updateLines();
-    window.addEventListener("resize", this.updateLines);
-    window.addEventListener("click", this.updateLines);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.updateLines);
-    window.removeEventListener("click", this.updateLines);
-  },
-  methods: {
-    updateLines() {
-      const textContainer = this.$el.querySelector(".text-container");
-      const style = window.getComputedStyle(textContainer);
-      const fontSize = parseInt(style.fontSize);
-      const lineHeight = parseInt(style.lineHeight);
-      const maxHeight = textContainer.offsetHeight;
-      this.lines = Math.ceil(maxHeight / lineHeight) + 1;
-    }
-  }
-};
-</script>
-
-<style>
-
-</style> */
