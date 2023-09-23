@@ -22,11 +22,11 @@ function CommentedText({ text }) {
         {Array.from({ length: lineCount }, (_, i) => i + 1).map(
           (line, index) => {
             const comment =
-              line === 1 ? "/**" : line === lineCount ? "**/" : "*";
+              line === 1 ? "/**" : line === lineCount ? " */" : "*";
             return (
-              <div key={index} className="grid grid-cols-2 justify-start">
-                <span className="col-span-1 w-10 text-left">{line}</span>
-                <div className="col-span-1 flex justify-start">{comment}</div>
+              <div key={index} className="grid grid-cols-2 justify-start gap-6">
+                <span className="col-span-1 w-5 text-left">{line}</span>
+                <div className="col-span-1 flex justify-center">{comment}</div>
               </div>
             );
           },

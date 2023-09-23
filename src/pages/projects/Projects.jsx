@@ -131,14 +131,12 @@ function Projects({ isMenuOpen }) {
             {/* <!-- projects --> */}
 
             <div
+              key="1"
               id="projects-case"
               className="grid h-full max-w-full grid-cols-1 overflow-scroll lg:grid-cols-2 lg:self-center"
             >
               {filtredProject.length === 0 && (
-                <div
-                  id="not-found"
-                  className="my-5 flex h-full flex-col items-center justify-center font-fira_retina text-menu-text"
-                >
+                <div className="border-all flex flex-col items-center justify-center rounded-lg p-10 font-fira_retina text-menu-text">
                   <span className="flex justify-center pb-3 text-4xl">
                     X__X
                   </span>
