@@ -41,6 +41,7 @@ function Projects({ isMenuOpen }) {
 
           {/* section title (mobile)  */}
           <div
+            id="section-content-title"
             className="flex lg:hidden"
             onClick={() => {
               setIsOpen(!isOpen);
@@ -63,7 +64,10 @@ function Projects({ isMenuOpen }) {
             }  w-full flex-col font-fira_regular text-menu-text lg:flex`}
           >
             {/* <!-- title --> */}
-            <div className="hidden min-w-full items-center lg:flex">
+            <div
+              id="section-content-title"
+              className="hidden min-w-full items-center lg:flex"
+            >
               <img
                 id="section-arrow-menu"
                 src="icons/arrow-down.svg"
@@ -126,9 +130,15 @@ function Projects({ isMenuOpen }) {
 
             {/* <!-- projects --> */}
 
-            <div className="grid h-full max-w-full grid-cols-1 overflow-scroll lg:grid-cols-2 lg:self-center">
+            <div
+              id="projects-case"
+              className="grid h-full max-w-full grid-cols-1 overflow-scroll lg:grid-cols-2 lg:self-center"
+            >
               {filtredProject.length === 0 && (
-                <div className="border-all flex flex-col items-center justify-center rounded-lg p-10 font-fira_retina text-menu-text">
+                <div
+                  id="not-found"
+                  className="border-all my-5 flex h-full flex-col items-center justify-center font-fira_retina text-menu-text"
+                >
                   <span className="flex justify-center pb-3 text-4xl">
                     X__X
                   </span>
@@ -190,7 +200,6 @@ function Projects({ isMenuOpen }) {
                     </div>
                     {isModalOpen && (
                       <ModalProject
-                        key={project.id * 2}
                         isOpen={isModalOpen}
                         closeModal={setIsModalOpen}
                         content={project}
