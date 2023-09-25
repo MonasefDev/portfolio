@@ -25,8 +25,8 @@ function About({ isMenuOpen }) {
       </Helmet>
 
       {currentSection.sectionInfo !== "" && (
-        <main id="about-me" className={` ${isMenuOpen ? "hidden" : "page"} `}>
-          <div id="mobile-page-title">
+        <main className={` ${isMenuOpen ? "hidden" : "page"} `}>
+          <div>
             <h2>_about-me</h2>
           </div>
           {/* Section Menu */}

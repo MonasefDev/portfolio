@@ -19,7 +19,7 @@ const ModalProject = ({ closeModal, content }) => {
   return (
     <div
       data-aos="zoom-out"
-      className="absolute inset-x-0 inset-y-5 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70 text-hello-gray  lg:inset-0 "
+      className="absolute inset-x-0 inset-y-10 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70 text-hello-gray  lg:inset-0 "
     >
       <div className="relative rounded-xl bg-opacity-70 md:w-1/2 ">
         <span

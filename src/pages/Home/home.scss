@@ -1,4 +1,4 @@
-#hello {
+.hello {
   height: 100%;
   width: 100%;
   flex: 1 1 auto;
@@ -19,7 +19,7 @@
   z-index: 20;
 }
 
-#hello .hero {
+.hello .hero {
   display: flex;
   flex-direction: column;
   /* display: grid;
@@ -27,14 +27,14 @@
   margin: 0rem;
 }
 
-#hello .head span {
+.hello .head span {
   font-size: 18px;
   line-height: 1;
   color: #e5e9f0;
   font-family: "Fira Code Retina";
 }
 
-#hello .head h1 {
+.hello .head h1 {
   line-height: 1;
   color: #e5e9f0;
   font-family: "Fira Code Regular";
@@ -42,7 +42,7 @@
   padding-bottom: 1rem; /* 16px */
 }
 
-#hello .head h2 {
+.hello .head h2 {
   font-size: 32px;
   line-height: 1;
   color: #4d5bce;
@@ -142,11 +142,11 @@
 
 /* mobile */
 @media (max-width: 768px) {
-  #hello {
+  .hello {
     padding-left: 0;
   }
 
-  #hello .hero {
+  .hello .hero {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -156,7 +156,7 @@
     padding-top: 4rem; /* 40px */
   }
 
-  #hello .head h2 {
+  .hello .head h2 {
     font-size: 20px;
     color: #43d9ad;
   }
@@ -168,10 +168,10 @@
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-  #hello {
+  .hello {
     padding-left: 0;
   }
-  #hello .hero {
+  .hello .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +183,7 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1320px) {
-  #hello {
+  .hello {
     padding-left: 135px;
   }
 }
@@ -216,10 +216,10 @@
 }
 
 @media (min-width: 1920px) {
-  #hello {
+  .hello {
     padding-left: 310px;
   }
-  #hello .head h1 {
+  .hello .head h1 {
     font-size: 62px;
   }
 }

@@ -7,7 +7,7 @@ function Home({ isMenuOpen }) {
       <Helmet>
         <title>Home | MoNaSeF Abdelkarim</title>
       </Helmet>
-      <main id="hello" className={`${isMenuOpen ? "hidden" : "flex"}`}>
+      <main className={`hello ${isMenuOpen ? "hidden" : "flex"}`}>
         <div className="css-blurry-gradient-blue"></div>
         <div className="css-blurry-gradient-green"></div>
 
