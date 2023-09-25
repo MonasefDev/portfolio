@@ -19,11 +19,11 @@ const ModalProject = ({ closeModal, content }) => {
   return (
     <div
       data-aos="zoom-out"
-      className="absolute left-0 top-3 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70  text-hello-gray lg:top-0 "
+      className="absolute inset-0 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70  text-hello-gray "
     >
       <div className="relative rounded-xl bg-opacity-70 md:w-1/2 ">
         <span
-          className="absolute right-4 top-4 hidden cursor-pointer rounded-full text-[#fea55f] ring ring-[#1E2D3D] lg:top-4 lg:block "
+          className="absolute right-4 top-4 hidden cursor-pointer rounded-full text-[#fea55f] ring ring-[#1E2D3D] lg:block "
           onClick={() => closeModal(false)}
         >
           <RiCloseLine size={30} />
