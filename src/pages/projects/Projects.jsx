@@ -137,7 +137,7 @@ function Projects({ isMenuOpen }) {
               {filtredProject.length === 0 && (
                 <div
                   id="not-found"
-                  className="my-5 flex h-full flex-col items-center justify-center font-fira_retina text-menu-text"
+                  className="border-all my-5 flex h-full flex-col items-center justify-center font-fira_retina text-menu-text"
                 >
                   <span className="flex justify-center pb-3 text-4xl">
                     X__X

@@ -1,17 +1,7 @@
 import { Helmet } from "react-helmet";
 import dev from "../../developer.json";
 import "./home.scss";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { setSection, setSectionInfo } from "../../store/sectionSlice";
 function Home({ isMenuOpen }) {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setSection(dev.about.sections[0]));
-    dispatch(setSectionInfo(dev.about.sections[0].info[0].title));
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -50,9 +40,7 @@ function Home({ isMenuOpen }) {
           </div>
         </section>
 
-        <section data-aos="fade-up" className="game hidden lg:flex">
-          SnakeGame
-        </section>
+        <section id="formjs">FormJavascript</section>
       </main>
     </>
   );

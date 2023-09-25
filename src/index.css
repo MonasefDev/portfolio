@@ -17,7 +17,6 @@ html {
   margin: 30px;
   font-family: "Fira Code Retina";
   font-size: 16px;
-  position: relative;
 }
 
 body {
@@ -41,6 +40,7 @@ main.page {
   border: 1px solid #1e2d3d;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 #section-content-title {
@@ -88,6 +88,7 @@ main.page {
     justify-content: space-between;
     height: auto;
     border-radius: 0;
+    position: relative;
     min-height: stretch; /* This allows the page view for mobile to be full height when the content is less than the screen height. */
     width: 100%;
     width: auto;
@@ -246,6 +247,9 @@ main.page {
 
 .border-left {
   border-left: 1px solid #1e2d3d;
+}
+.border-all {
+  border: 1px solid #1e2d3d;
 }
 
 /* Scroll bar */
