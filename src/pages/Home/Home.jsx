@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import dev from "../../developer.json";
 import "./home.scss";
-import Particles from "../../components/particles/Particles";
 function Home({ isMenuOpen }) {
   return (
     <>

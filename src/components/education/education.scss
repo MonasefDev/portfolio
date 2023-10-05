@@ -58,13 +58,20 @@
     }
   }
   .links {
-    color: #3a49a4;
+    color: #3c9d93;
+    &:hover {
+      color: #43d9ad;
+    }
   }
   .dot-links {
     margin-left: -15px;
   }
   .autor {
-    color: #e99287;
+    color: #c0776d;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: #faa195;
+    }
   }
   .btn-certification {
     font-size: 12px;
