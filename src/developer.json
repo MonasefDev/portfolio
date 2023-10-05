@@ -66,6 +66,38 @@
           }
         ]
       }
+    ],
+    "education": [
+      {
+        "header": "Frontend Developer",
+        "date": "2021 - Present",
+        "description": "<br> HackerRank Certifications : <br><br> ● CSS : <button class='btn-certification'><a target='_blank' href='https://www.hackerrank.com/certificates/8ba54812023a'>View Certification</a></button> <br> ● JavaScript (Basic) : <button class='btn-certification'><a target='_blank' href='https://www.hackerrank.com/certificates/7698d1588e64'>View Certification</a></button><br> ● JavaScript (advanced) : <button class='btn-certification'><a target='_blank' href='https://www.hackerrank.com/certificates/94770bb21d10'>View Certification</a></button> <br> ● React (Basic) :  <button class='btn-certification'><a target='_blank' href='https://www.hackerrank.com/certificates/3f42bfe6c83c'>View Certification </a></button><br> <br> Udemy Courses : <br><br><a class='links' target='_blank' href='https://www.udemy.com/course/the-ultimate-react-course/'><span class='dot-links'> ● </span> The Ultimate React Course 2023: React, Redux & More </a> <span class='autor text-xs'> by Jonas Schmedtmann : </span> <br> Mastering the React ecosystem comprehensively, from basics to advanced state management using Redux. Build powerful and scalable web applications with React, honing your skills in modern front-end development.<br><a class='links' target='_blank' href='https://www.udemy.com/course/react-redux/'><span class='dot-links'> ● </span> Modern React with Redux [2023 Update] </a> <span class='autor text-xs'> by Stephen Grider: </span><br> Delve into React and Redux, mastering the art of building scalable and efficient single-page applications. Gain practical experience through hands-on projects, learning industry best practices and solidifying your expertise in modern web development.<br><a class='links' target='_blank' href='https://www.udemy.com/course/the-complete-javascript-course/'><span class='dot-links'> ● </span> The Complete JavaScript Course 2023: </span><br> From Zero to Expert! </a> <span class='autor text-xs'> by Jonas Schmedtmann: </span><br> This is the biggest and the important course that I learned in my life, achieve JavaScript mastery, from foundational concepts to advanced topics. Develop dynamic web applications with hands-on projects, enhancing my proficiency in one of the most essential languages for web development.<br><a class='links' target='_blank' href='https://www.udemy.com/course/advanced-css-and-sass/'><span class='dot-links'> ● </span> Advanced CSS and Sass:  Flexbox, Grid, Animations and More! </a> <span class='autor text-xs'> by Jonas Schmedtmann: </span><br> Elevate my CSS expertise with advanced concepts like Flexbox, Grid, and animations. Dive into Sass to streamline my stylesheets, gaining the tools to create sophisticated and visually appealing web designs.<br><a class='links' target='_blank' href='https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/'><span class='dot-links'> ● </span> Build Responsive Real-World Websites with HTML and CSS </a> <span class='autor text-xs'> by Jonas Schmedtmann: </span><br> Master the essentials of HTML and CSS, creating dynamic and responsive web pages. Learn modern design techniques to build user-friendly websites, enhancing your skills in front-end development."
+      },
+      {
+        "header": "Mathematics Teacher",
+        "date": "2018 - Present",
+        "description": "<br> Mathematics Teacher - Ministry of National Education <br><br> <span class='dot-links'> ● </span> Delivered tailored instruction to cater to the diverse learning needs of students, fostering personalized learning experiences.<br><span class='dot-links'> ● </span> Collaborated with peers to exchange best practices and collaboratively devise interdisciplinary projects."
+      },
+      {
+        "header": "Internship",
+        "date": "2017 - 2018",
+        "description": "<br>Internship in Civil Engineering - TPF Pyramide Ingénierie<br><br> During my 6-month internship at TPF Pyramide Ingénierie, I actively contributed to civil engineering projects, gaining hands-on experience in structural design, project coordination, and site management. Collaborating with a dynamic team, I applied theoretical knowledge to real-world scenarios, enhancing my skills in problem-solving and project execution within a professional engineering environment."
+      },
+      {
+        "header": "Master's Degree",
+        "date": "2015 - 2017",
+        "description": "<br>Master's Degree in Civil Engineering - Faculty of Sciences.<br><br> Rabat I hold a master's degree in Civil Engineering, equipping me with advanced knowledge in structural design, project management, and sustainable infrastructure. My expertise encompasses the application of innovative engineering solutions, ensuring the development of resilient and efficient projects."
+      },
+      {
+        "header": "Bachelor's Degree",
+        "date": "2012 - 2015",
+        "description": "<br>Bachelor's Degree in Energy Physics - Faculty of Science Rabat.<br> <br> I possess a Bachelor's Degree in Energy Physics, cultivating a deep understanding of fundamental principles governing energy production, transformation, and utilization. My education has honed skills in renewable energy sources, quantum mechanics, and thermodynamics, preparing me to contribute to sustainable advancements in the dynamic field of energy physics."
+      },
+      {
+        "header": "High School Diploma",
+        "date": "2009 - 2012",
+        "description": "High School Diploma in Physics Science - High School Abderrahman Dakhil - Ain El Aouda.<br> <br> I hold a High School Diploma in Physics Science, where I laid the foundation for understanding the principles that govern the physical world. My coursework included mechanics, electromagnetism, and thermodynamics, fostering a curiosity for scientific inquiry and setting the stage for further academic pursuits in the field of physics."
+      }
     ]
   },
   "contacts": {

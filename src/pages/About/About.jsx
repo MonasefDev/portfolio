@@ -26,7 +26,7 @@ function About({ isMenuOpen }) {
 
       {currentSection.sectionInfo !== "" && (
         <main className={` ${isMenuOpen ? "hidden" : "page"} `}>
-          <div>
+          <div id="mobile-page-title">
             <h2>_about-me</h2>
           </div>
           {/* Section Menu */}

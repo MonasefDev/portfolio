@@ -17,7 +17,7 @@ function CommentedText({ text }) {
   }, [text]); // Trigger the calculation when the text prop changes
 
   return (
-    <div className="flex items-start font-fira_retina text-menu-text">
+    <div className="flex items-start font-fira_retina text-menu-text lg:my-5">
       <div className="hidden  flex-col text-right lg:flex">
         {Array.from({ length: lineCount }, (_, i) => i + 1).map(
           (line, index) => {
@@ -33,10 +33,11 @@ function CommentedText({ text }) {
         )}
       </div>
 
-      <div ref={ref} className="ml[-10px] w-full break-words text-base">
-        <br />
-        {text}
-      </div>
+      <div
+        dangerouslySetInnerHTML={{ __html: text }}
+        ref={ref}
+        className="ml[-10px] w-full break-words text-base"
+      />
     </div>
   );
 }

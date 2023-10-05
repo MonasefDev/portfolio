@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import dev from "../../developer.json";
 import "./home.scss";
+import Particles from "../../components/particles/Particles";
 function Home({ isMenuOpen }) {
   return (
     <>
@@ -40,7 +41,9 @@ function Home({ isMenuOpen }) {
           </div>
         </section>
 
-        <section id="formjs">FormJavascript</section>
+        <section className="relative h-full w-full">
+          {/* <Particles /> */}
+        </section>
       </main>
     </>
   );
