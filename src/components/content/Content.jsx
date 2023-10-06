@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import CommentedText from "../commentedText/CommentedText";
 
 import dev from "../../developer.json";
-import TimeLineComponent from "../timeLineComponent/TimeLineComponent";
+import TimeLineComponent from "./TimeLineComponent";
 function Content() {
   const { section, sectionInfo } = useSelector((state) => state.section);
   const [currentInfo, setCurrentInfo] = useState("");
