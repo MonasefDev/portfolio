@@ -26,7 +26,7 @@ function CommentedText({ text }) {
             return (
               <div key={index} className="grid grid-cols-2 justify-start gap-6">
                 <span className="col-span-1 w-5 text-left">{line}</span>
-                <div className="col-span-1 flex justify-center">{comment}</div>
+                <div className="col-span-1  flex justify-center">{comment}</div>
               </div>
             );
           },
@@ -36,7 +36,7 @@ function CommentedText({ text }) {
       <div
         dangerouslySetInnerHTML={{ __html: text }}
         ref={ref}
-        className="ml[-10px] w-full break-words text-base"
+        className="lg:ml[-10px] w-full break-words  px-5 text-base lg:px-0"
       />
     </div>
   );

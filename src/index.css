@@ -109,7 +109,7 @@ main.page {
     height: 30px;
     background-color: #1e2d3d;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 10px;
   }
 
   .submenu .title {

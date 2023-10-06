@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CommentedText from "../commentedText/CommentedText";
-import Education from "../education/Education";
+import TimeLineComponent from "../TimeLineComponent/TimeLineComponent";
 
+import dev from "../../developer.json";
 function Content() {
   const { section, sectionInfo } = useSelector((state) => state.section);
   const [currentInfo, setCurrentInfo] = useState("");
@@ -13,11 +14,11 @@ function Content() {
     setCurrentInfo(...info);
     switch (currentInfo.title) {
       case "education":
-        setCurrentElement(<Education />);
+        setCurrentElement(<TimeLineComponent element={dev.about.education} />);
         break;
-      // case "bio":
-      //   setCurrentElement(<Bio />);
-      // break;
+      case "experience":
+        setCurrentElement(<TimeLineComponent element={dev.about.experience} />);
+        break;
       default:
         setCurrentElement(<CommentedText text={currentInfo.description} />);
     }
@@ -35,7 +36,7 @@ function Content() {
       </div>
 
       {/*   windows tab mobile */}
-      <div className="flex items-end p-6 font-fira_retina lg:hidden">
+      <div className="flex items-end border-b border-[#1e2d3d] p-6 font-fira_retina lg:hidden">
         <span className="text-white">{"//"} </span>
         <h3 className="px-2 text-white">{section.title}</h3>
         <span className="text-menu-text"> / </span>

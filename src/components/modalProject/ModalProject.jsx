@@ -47,7 +47,7 @@ const ModalProject = ({ closeModal, content }) => {
                 </span>
                 <span>{`//${title}`}</span>
               </p>
-              <figure className=" rounded-t-2xl   border-b border-[#1e2d3d] lg:w-full ">
+              <figure className="border-y border-[#1e2d3d] lg:w-full ">
                 <ReactImageGallery items={imageReadyToView} showNav={false} />
               </figure>
 

@@ -43,7 +43,7 @@ function SectionInfo({ section, sectionOpen = false }) {
                   : "text-menu-text"
               }`}
             >
-              <div className="col-span-2 flex hover:cursor-pointer hover:text-white">
+              <div className="col-span-2 flex px-5 hover:cursor-pointer hover:text-white">
                 <img
                   id="diple"
                   className={`${
@@ -74,7 +74,7 @@ function SectionInfo({ section, sectionOpen = false }) {
                         <img
                           src="../icons/markdown.svg"
                           alt=""
-                          className="ml-8 mr-3"
+                          className="ml-[52px] mr-3"
                         />
                         <p>{file.title}</p>
                       </div>

@@ -1,13 +1,13 @@
 import TimelineElement from "./TimelineElement";
 import "./education.scss";
 import { FaUserGraduate } from "react-icons/fa";
-import dev from "../../developer.json";
 
-function Education() {
+function TimeLineComponent({ element }) {
+  console.log(element);
   return (
     <div className="h-full w-full p-2 lg:py-5">
       <div className="timeline">
-        {dev.about.education.map((diplome, index) => (
+        {element.map((diplome, index) => (
           <TimelineElement
             key={index}
             date={diplome.date}
@@ -22,4 +22,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default TimeLineComponent;
