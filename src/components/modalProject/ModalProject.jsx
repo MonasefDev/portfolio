@@ -19,7 +19,7 @@ const ModalProject = ({ closeModal, content }) => {
   return (
     <div
       data-aos="zoom-out"
-      className="absolute inset-0 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70  text-hello-gray "
+      className="absolute inset-x-0 inset-y-10 z-50 flex h-full w-full items-center justify-center bg-blue-background bg-opacity-70 text-hello-gray  lg:inset-0 "
     >
       <div className="relative rounded-xl bg-opacity-70 md:w-1/2 ">
         <span
@@ -36,7 +36,7 @@ const ModalProject = ({ closeModal, content }) => {
           <div className="lg:my-7">
             <div className="relative rounded-2xl border border-[#1e2d3d] bg-blue-background">
               <span
-                className="absolute left-0 top-0 ml-2 mt-2 cursor-pointer rounded-full text-[#fea55f] ring ring-[#1E2D3D] lg:hidden"
+                className="cuSrsor-pointer absolute left-0 top-0 ml-2 mt-2 rounded-full text-[#fea55f] ring ring-[#1E2D3D] lg:hidden"
                 onClick={() => closeModal(false)}
               >
                 <MdOutlineArrowBack size={25} />
@@ -47,7 +47,7 @@ const ModalProject = ({ closeModal, content }) => {
                 </span>
                 <span>{`//${title}`}</span>
               </p>
-              <figure className=" rounded-t-2xl   border-b border-[#1e2d3d] lg:w-full ">
+              <figure className="border-y border-[#1e2d3d] lg:w-full ">
                 <ReactImageGallery items={imageReadyToView} showNav={false} />
               </figure>
 

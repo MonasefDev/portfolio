@@ -38,9 +38,9 @@ function Footer() {
           </Link>
           <Link
             to={
-              dev.contacts.social.twitter.url +
+              dev.contacts.social.github.url +
               "/" +
-              dev.contacts.social.twitter.user
+              dev.contacts.social.github.user
             }
             target="_blank"
             className="flex items-center justify-center lg:hidden"

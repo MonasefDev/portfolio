@@ -1,16 +1,28 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CommentedText from "../commentedText/CommentedText";
+import TimeLineComponent from "../TimeLineComponent/TimeLineComponent";
 
+import dev from "../../developer.json";
 function Content() {
   const { section, sectionInfo } = useSelector((state) => state.section);
   const [currentInfo, setCurrentInfo] = useState("");
+  const [currentElement, setCurrentElement] = useState("");
 
   useEffect(() => {
     const info = section.info.filter((info) => info.title === sectionInfo);
     setCurrentInfo(...info);
-  }, [section, currentInfo, sectionInfo]);
-
+    switch (currentInfo.title) {
+      case "education":
+        setCurrentElement(<TimeLineComponent element={dev.about.education} />);
+        break;
+      case "experience":
+        setCurrentElement(<TimeLineComponent element={dev.about.experience} />);
+        break;
+      default:
+        setCurrentElement(<CommentedText text={currentInfo.description} />);
+    }
+  }, [currentInfo, section, sectionInfo]);
   return (
     <div id="left" className="border-right flex w-full flex-col">
       {/* windows tab desktop */}
@@ -24,7 +36,7 @@ function Content() {
       </div>
 
       {/*   windows tab mobile */}
-      <div id="tab-mobile" className="flex font-fira_retina lg:hidden">
+      <div className="flex items-end border-b border-[#1e2d3d] p-6 font-fira_retina lg:hidden">
         <span className="text-white">{"//"} </span>
         <h3 className="px-2 text-white">{section.title}</h3>
         <span className="text-menu-text"> / </span>
@@ -32,12 +44,9 @@ function Content() {
       </div>
 
       {/*  text */}
-      <div
-        id="commented-text"
-        className="lg:border-right flex h-full w-full overflow-hidden"
-      >
-        <div className="ml-5 mr-10 h-full w-full overflow-scroll lg:my-5">
-          <CommentedText text={currentInfo.description} />
+      <div className="lg:border-right flex h-full w-full overflow-hidden">
+        <div className="mx-0 h-full w-full  overflow-scroll lg:ml-5 lg:mr-10">
+          {currentElement}
         </div>
 
         {/*  scroll bar */}

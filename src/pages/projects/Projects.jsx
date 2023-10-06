@@ -9,6 +9,7 @@ function Projects({ isMenuOpen }) {
   const [filtredProject, setFiltredProject] = useState(dev.projects);
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleChange = (event) => {
     const { value, checked } = event.target;
@@ -188,6 +189,7 @@ function Projects({ isMenuOpen }) {
                             id="view-button"
                             onClick={() => {
                               setIsModalOpen(true);
+                              setSelectedProject(project);
                             }}
                             target="_blank"
                             rel="noreferrer"
@@ -198,16 +200,16 @@ function Projects({ isMenuOpen }) {
                         </div>
                       </div>
                     </div>
-                    {isModalOpen && (
-                      <ModalProject
-                        isOpen={isModalOpen}
-                        closeModal={setIsModalOpen}
-                        content={project}
-                      />
-                    )}
                   </>
                 );
               })}
+              {isModalOpen && (
+                <ModalProject
+                  isOpen={isModalOpen}
+                  closeModal={setIsModalOpen}
+                  content={selectedProject}
+                />
+              )}
             </div>
           </div>
         </main>
