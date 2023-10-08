@@ -3,7 +3,6 @@ import "./education.scss";
 import { FaUserGraduate } from "react-icons/fa";
 
 function TimeLineComponent({ element }) {
-  console.log(element);
   return (
     <div className="h-full w-full p-2 lg:py-5">
       <div className="timeline">

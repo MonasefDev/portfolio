@@ -3,6 +3,7 @@ import "./projects.scss";
 import { useState } from "react";
 import dev from "../../developer.json";
 import ModalProject from "../../components/modalProject/ModalProject";
+import { Helmet } from "react-helmet";
 function Projects({ isMenuOpen }) {
   const techs = ["React", "HTML", "CSS", "Vue", "Angular", "Gatsby", "Flutter"];
   const [checkedValue, setCheckedValue] = useState([]);
@@ -34,6 +35,9 @@ function Projects({ isMenuOpen }) {
 
   return (
     <>
+      <Helmet>
+        <title>Projects | MoNaSeF Abdelkarim</title>
+      </Helmet>
       {!isMenuOpen && (
         <main className="flex flex-auto flex-col overflow-hidden text-base lg:flex-row">
           <div id="mobile-page-title">
@@ -82,9 +86,8 @@ function Projects({ isMenuOpen }) {
             <nav id="filters" className="w-full flex-col">
               {techs.map((tech, i) => {
                 return (
-                  <div key={tech} className="flex items-center py-2">
+                  <div key={tech + i} className="flex items-center py-2">
                     <input
-                      key={tech}
                       type="checkbox"
                       onChange={handleChange}
                       value={tech}
@@ -153,54 +156,52 @@ function Projects({ isMenuOpen }) {
               )}
               {filtredProject.map((project) => {
                 return (
-                  <>
-                    <div key={project.id} className="lg:mx-5">
-                      {/* <!-- title --> */}
-                      <span className="my-3 flex text-base">
-                        <h3 className="mr-3 font-bold text-purplefy">
-                          {`Project ${project.id}`}
-                        </h3>
-                        <h4 className=" text-menu-text">{`// ${project.title}`}</h4>
-                      </span>
+                  <div key={project.id} className="lg:mx-5">
+                    {/* <!-- title --> */}
+                    <span className="my-3 flex text-base">
+                      <h3 className="mr-3 font-bold text-purplefy">
+                        {`Project ${project.id}`}
+                      </h3>
+                      <h4 className=" text-menu-text">{`// ${project.title}`}</h4>
+                    </span>
 
-                      {/* <!-- info --> */}
-                      <div id="project-card" className="flex flex-col">
-                        <div id="window">
-                          <div className="absolute right-3 top-3 flex">
-                            <img
-                              src={`icons/techs/filled/${project.tech[0].toLowerCase()}.svg`}
-                              alt=""
-                              className="mx-1 h-7 w-7 hover:opacity-75"
-                            />
-                          </div>
+                    {/* <!-- info --> */}
+                    <div id="project-card" className="flex flex-col">
+                      <div id="window">
+                        <div className="absolute right-3 top-3 flex">
                           <img
-                            src={project.img}
-                            id="showcase"
+                            src={`icons/techs/filled/${project.tech[0].toLowerCase()}.svg`}
                             alt=""
-                            className=""
+                            className="mx-1 h-7 w-7 hover:opacity-75"
                           />
                         </div>
+                        <img
+                          src={project.img}
+                          id="showcase"
+                          alt=""
+                          className=""
+                        />
+                      </div>
 
-                        <div className="border-top px-6 pb-8 pt-6">
-                          <p className="mb-5 font-fira_retina text-sm text-menu-text">
-                            {project.description}
-                          </p>
-                          <div
-                            id="view-button"
-                            onClick={() => {
-                              setIsModalOpen(true);
-                              setSelectedProject(project);
-                            }}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="w-fit cursor-pointer rounded-lg px-4 py-2 font-fira_retina text-xs text-white"
-                          >
-                            view-project
-                          </div>
+                      <div className="border-top px-6 pb-8 pt-6">
+                        <p className="mb-5 font-fira_retina text-sm text-menu-text">
+                          {project.description}
+                        </p>
+                        <div
+                          id="view-button"
+                          onClick={() => {
+                            setIsModalOpen(true);
+                            setSelectedProject(project);
+                          }}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-fit cursor-pointer rounded-lg px-4 py-2 font-fira_retina text-xs text-white"
+                        >
+                          view-project
                         </div>
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
               {isModalOpen && (
