@@ -37,46 +37,46 @@ function ContactSection() {
 
       {/*  text */}
       <div className="lg:border-right flex h-full w-full overflow-hidden">
-        <div className="flex h-full w-full items-center justify-center overflow-scroll p-4">
+        <div className="no-scroll flex h-full w-full items-center justify-center overflow-scroll p-4">
           <form
             id="contact-form"
-            class="text-sm"
+            className="text-sm"
             ref={form}
             onSubmit={sendEmail}
           >
-            <div class="flex flex-col">
-              <label class="mb-3">_name:</label>
+            <div className="flex flex-col">
+              <label className="mb-3">_name:</label>
               <input
                 type="text"
                 id="name-input"
                 name="user_name"
                 placeholder="name"
-                class="mb-5 p-2 placeholder-slate-600"
+                className="mb-5 p-2 placeholder-slate-600"
                 required
               />
             </div>
-            <div class="flex flex-col">
-              <label class="mb-3">_email:</label>
+            <div className="flex flex-col">
+              <label className="mb-3">_email:</label>
               <input
                 type="email"
                 id="email-input"
                 name="user_email"
                 placeholder="email"
-                class="mb-5 p-2 placeholder-slate-600"
+                className="mb-5 p-2 placeholder-slate-600"
                 required
               />
             </div>
-            <div class="flex flex-col">
-              <label class="mb-3">_message:</label>
+            <div className="flex flex-col">
+              <label className="mb-3">_message:</label>
               <textarea
                 id="message-input"
                 name="message"
                 placeholder="message"
-                class="placeholder-slate-600"
+                className="placeholder-slate-600"
                 required
               />
             </div>
-            <button id="submit-button" type="submit" class="px-4 py-2">
+            <button id="submit-button" type="submit" className="px-4 py-2">
               Send
             </button>
           </form>

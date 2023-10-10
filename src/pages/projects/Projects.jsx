@@ -136,7 +136,7 @@ function Projects({ isMenuOpen }) {
 
             <div
               id="projects-case"
-              className="grid h-full max-w-full grid-cols-1 overflow-scroll lg:grid-cols-2 lg:self-center"
+              className="no-scroll grid h-full max-w-full grid-cols-1 overflow-scroll lg:grid-cols-2 lg:self-center"
             >
               {filtredProject.length === 0 && (
                 <div

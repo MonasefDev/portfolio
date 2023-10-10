@@ -45,7 +45,7 @@ function Content() {
 
       {/*  text */}
       <div className="lg:border-right flex h-full w-full overflow-hidden">
-        <div className="mx-0 h-full w-full  overflow-scroll lg:ml-5 lg:mr-10">
+        <div className="no-scroll mx-0 h-full  w-full overflow-scroll lg:ml-5 lg:mr-10">
           {currentElement}
         </div>
 

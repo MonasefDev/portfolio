@@ -17,7 +17,7 @@ function CodeSnippet() {
             {"// Code snippet showcase:"}
           </h3>
 
-          <div className="flex flex-col overflow-scroll px-5">
+          <div className="no-scroll flex flex-col overflow-scroll px-5">
             {/* <!-- snippets --> */}
             {dev.gists.map((key) => (
               <CodeSnippetgist key={key} data-aos="fade-down" KEY={key} />
