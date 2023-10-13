@@ -9,7 +9,7 @@ function SectionContact({ contacts, sectionOpen = false }) {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="border-top -mt-[1px] flex min-w-full items-center"
+        className="border-top -mt-[1px] flex  min-w-full items-center"
       >
         <img
           id="section-arrow-menu"

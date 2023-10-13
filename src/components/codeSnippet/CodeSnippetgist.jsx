@@ -6,7 +6,6 @@ import "./codeSnippet.scss";
 
 function CodeSnippetgist({ KEY }) {
   const { gist, isLoading } = useGists(KEY);
-  // const { comment, isLoading: isCommentLoading } = useComments(KEY);
   const [isOpen, setIsOpen] = useState(false);
 
   function getMonths(date) {

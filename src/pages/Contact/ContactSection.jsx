@@ -26,14 +26,6 @@ function ContactSection() {
   return (
     <div id="left" className="border-right flex w-full flex-col">
       {/* windows tab desktop */}
-      <div className="tab-height border-bot hidden w-full items-center lg:flex">
-        <div className="border-right flex h-full items-center">
-          <p className="px-3 font-fira_regular text-base text-menu-text">
-            Contacts
-          </p>
-          <img src="../icons/close.svg" alt="" className="mx-3" />
-        </div>
-      </div>
 
       {/*  text */}
       <div className="lg:border-right flex h-full w-full overflow-hidden">
@@ -77,17 +69,9 @@ function ContactSection() {
               />
             </div>
             <button id="submit-button" type="submit" className="px-4 py-2">
-              Send
+              submit-message
             </button>
           </form>
-        </div>
-
-        {/*  scroll bar */}
-        <div
-          id="scroll-bar"
-          className="border-left hidden h-full justify-center py-1 lg:flex"
-        >
-          <div id="scroll"></div>
         </div>
       </div>
     </div>

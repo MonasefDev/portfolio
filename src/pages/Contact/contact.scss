@@ -6,6 +6,9 @@ input {
   border: 2px solid #1e2d3d;
   border-radius: 7px;
 }
+.hljs {
+  background: transparent;
+}
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
