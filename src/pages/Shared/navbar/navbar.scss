@@ -1,5 +1,5 @@
 #navbar {
-  #nav-link {
+  .nav-link {
     border-right: 1px solid #1e2d3d;
     @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
     position: relative;
@@ -27,7 +27,7 @@
     @apply flex h-full items-center px-6 font-fira_retina text-menu-text;
   }
 
-  #nav-link:hover,
+  .nav-link:hover,
   #nav-link-contact:hover {
     background-color: #1e2d3d74;
     color: white;
