@@ -36,7 +36,7 @@ function CommentedText({ text }) {
       <div
         dangerouslySetInnerHTML={{ __html: text }}
         ref={ref}
-        className="lg:ml[-10px] w-full break-words  px-5 text-base lg:px-0"
+        className="lg:ml[-10px] no-scroll w-full  break-words px-5 text-base lg:px-0"
       />
     </div>
   );

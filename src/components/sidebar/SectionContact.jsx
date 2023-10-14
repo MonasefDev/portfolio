@@ -9,7 +9,7 @@ function SectionContact({ contacts, sectionOpen = false }) {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="border-top flex min-w-full items-center"
+        className="border-top -mt-[1px] flex  min-w-full items-center"
       >
         <img
           id="section-arrow-menu"
@@ -23,9 +23,9 @@ function SectionContact({ contacts, sectionOpen = false }) {
         id="contact-sources"
         className={`${isOpen ? "flex" : "hidden"} my-2   flex-col`}
       >
-        {contacts.sources.map((contact) => {
+        {contacts.sources.map((contact, i) => {
           return (
-            <div key={contact.name} className="mb-2 flex items-center">
+            <div key={contact.name + i} className="mb-2 flex items-center">
               <img
                 src={`../icons/${contact.name}.svg`}
                 alt=""

@@ -10,8 +10,7 @@ function Home({ isMenuOpen }) {
       <main className={`hello ${isMenuOpen ? "hidden" : "flex"}`}>
         <div className="css-blurry-gradient-blue"></div>
         <div className="css-blurry-gradient-green"></div>
-
-        <section className="hero">
+        <section className="hero z-10">
           <div className="head">
             <span>Hi all, I am</span>
             <h1 className="text-3xl lg:text-5xl">{dev.name}</h1>

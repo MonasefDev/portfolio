@@ -6,6 +6,7 @@ import { useState } from "react";
 import About from "./pages/About/About";
 import Projects from "./pages/projects/Projects";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,10 @@ function App() {
             path="projects"
             element={<Projects isMenuOpen={isMenuOpen} />}
           />
-          <Route path="contact" element={<About isMenuOpen={isMenuOpen} />} />
+          <Route
+            path="contact-me"
+            element={<Contact isMenuOpen={isMenuOpen} />}
+          />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

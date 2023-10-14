@@ -89,15 +89,15 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
               {dev.logo_name}
             </Link>
 
-            <NavLink id="nav-link" to="/">
+            <NavLink className="nav-link" to="/">
               _hello
             </NavLink>
 
-            <NavLink id="nav-link" to="/about-me">
+            <NavLink className="nav-link" to="/about-me">
               _about-me
             </NavLink>
 
-            <NavLink id="nav-link" to="/projects">
+            <NavLink className="nav-link" to="/projects">
               _projects
             </NavLink>
           </div>

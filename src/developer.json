@@ -115,6 +115,15 @@
         { "name": "phone", "contact": "+212633627300" }
       ]
     },
+    "find": {
+      "title": "find-me-also-in",
+      "sources": [
+        { "name": "link", "contact": "YouTube channel" },
+        { "name": "link", "contact": "GuruShots profile" },
+        { "name": "link", "contact": "Instagram accaunt" },
+        { "name": "link", "contact": "Twich profile" }
+      ]
+    },
     "social": {
       "github": {
         "title": "Github profile",
@@ -165,6 +174,33 @@
   ],
   "projects": [
     {
+      "id": 1,
+      "title": "_movix",
+      "description": "Watch the latest movies and tv shows with Full HD quality...",
+      "detail": "Discover the artistry of dance at our vibrant dance school, offering a wide range of classes for all ages and skill levels. Experience the joy of movement and expression through our dance school's expert instruction, nurturing a passion for dance in a supportive and inclusive environment. admin-email:admin@danceschool.com, password:Admin@626456",
+      "img": "./images/projects/movix/img0.png",
+      "tech": ["React", "Redux", "CSS", "Tailwind"],
+      "url": "https://github.com/",
+      "features": [
+        "Navigation",
+        "Responsive Design",
+        "Dynamic routing",
+        "Search Functionality",
+        "Fetch all data from TMDB API",
+        "Fetch data from other API to get the id to fetch data for streaming",
+        "Fetch data from API for Streaming"
+      ],
+      "images": [
+        "./images/projects/movix/img1.png",
+        "./images/projects/movix/img2.png",
+        "./images/projects/movix/img3.png",
+        "./images/projects/movix/img4.png",
+        "./images/projects/movix/img5.png"
+      ],
+      "codeLink": "https://github.com/monasefdev",
+      "liveLink": "https://toptools.tech/"
+    },
+    {
       "id": 2,
       "title": "_dance-school",
       "description": "Discover the artistry of dance at our vibrant dance school...",
@@ -190,32 +226,6 @@
       ],
       "codeLink": "https://github.com/mahamudulhasan-me/dance-school.git",
       "liveLink": "https://dance-school-6fa61.web.app"
-    },
-    {
-      "id": 1,
-      "title": "_movix",
-      "description": "Watch the latest movies and tv shows with Full HD quality...",
-      "detail": "Discover the artistry of dance at our vibrant dance school, offering a wide range of classes for all ages and skill levels. Experience the joy of movement and expression through our dance school's expert instruction, nurturing a passion for dance in a supportive and inclusive environment. admin-email:admin@danceschool.com, password:Admin@626456",
-      "img": "https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCbaUr631F8WVh3VVjTy-ORhUlnQcFLbAkvW5529Szk9HxNFQqh6mm_tgv5WTjwZudNLgn517GJCAtLtQsX7mtybkErag=w1920-h923",
-      "tech": ["React"],
-      "url": "https://github.com/",
-      "features": [
-        "Navigation",
-        "Responsive Design",
-        "Dynamic routing",
-        "Search Functionality",
-        "Fetch all data from TMDB API",
-        "Fetch data from other API to get the id to fetch data for streaming",
-        "Fetch data from API for Streaming"
-      ],
-      "images": [
-        "https://lh3.google.com/u/0/d/1yE2IF5CYL30rLT2PN5u2d45BO6hAXLuH=w1920-h850-iv1",
-        "https://lh3.google.com/u/0/d/1IqdIMyYFV9SJQ-U_mGMlR49qbohLUbRf=w1920-h628-iv1",
-        "https://lh3.google.com/u/0/d/1zWtGv9pQdOi8CWlXbG5yJJAddkiT3Knm=w1920-h850-iv1",
-        "https://lh3.google.com/u/0/d/1qgayMQ6qHnU42mQFuz46h94Iz3mZqVk2=w1920-h923-iv1"
-      ],
-      "codeLink": "https://github.com/monasefdev",
-      "liveLink": "https://toptools.tech/"
     }
   ],
   "restProject": [

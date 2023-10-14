@@ -12,16 +12,16 @@
 
 html {
   @apply bg-dark-background font-sans;
-  height: stretch;
-  width: stretch;
-  margin: 30px;
-  font-family: "Fira Code Retina";
-  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
 }
 
 body {
-  height: stretch;
-  width: stretch;
+  height: 100%;
+  width: 100%;
+  font-family: "Fira Code Retina";
+  font-size: 16px;
 }
 
 main.page {
@@ -77,7 +77,7 @@ main.page {
 /* MOBILE AND TABLET (SM - LG) */
 @media (max-width: 1024px) {
   html {
-    margin: 0;
+    padding: 0;
     min-height: 100%;
     height: stretch;
     width: stretch;
@@ -275,7 +275,10 @@ main.page {
 ::-webkit-scrollbar-thumb:hover {
   background: #7b9bbb;
 }
-
+.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 /* Fonts */
 
 @font-face {
