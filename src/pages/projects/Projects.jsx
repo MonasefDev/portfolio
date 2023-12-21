@@ -4,6 +4,7 @@ import { useState } from "react";
 import dev from "../../developer.json";
 import ModalProject from "../../components/modalProject/ModalProject";
 import { Helmet } from "react-helmet";
+import Img from "../../components/Img";
 function Projects({ isMenuOpen }) {
   const techs = ["React", "HTML", "CSS", "Vue", "Angular", "Gatsby", "Flutter"];
   const [checkedValue, setCheckedValue] = useState([]);
@@ -168,18 +169,18 @@ function Projects({ isMenuOpen }) {
                     {/* <!-- info --> */}
                     <div id="project-card" className="flex flex-col">
                       <div id="window">
-                        <div className="absolute right-3 top-3 flex">
+                        <div className="absolute right-3 top-3 z-10 flex">
                           <img
                             src={`icons/techs/filled/${project.tech[0].toLowerCase()}.svg`}
                             alt=""
                             className="mx-1 h-7 w-7 hover:opacity-75"
                           />
                         </div>
-                        <img
+                        <Img
                           src={project.img}
                           id="showcase"
                           alt=""
-                          className=""
+                          className="z-1"
                         />
                       </div>
 

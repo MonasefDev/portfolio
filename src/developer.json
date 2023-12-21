@@ -178,7 +178,7 @@
       "title": "_movix",
       "description": "Watch the latest movies and tv shows with Full HD quality...",
       "detail": "Discover the artistry of dance at our vibrant dance school, offering a wide range of classes for all ages and skill levels. Experience the joy of movement and expression through our dance school's expert instruction, nurturing a passion for dance in a supportive and inclusive environment. admin-email:admin@danceschool.com, password:Admin@626456",
-      "img": "./images/projects/movix/img0.png",
+      "img": "https://i.ibb.co/LzXthYW/img0.png",
       "tech": ["React", "Redux", "CSS", "Tailwind"],
       "url": "https://github.com/",
       "features": [
@@ -191,91 +191,14 @@
         "Fetch data from API for Streaming"
       ],
       "images": [
-        "./images/projects/movix/img1.png",
-        "./images/projects/movix/img2.png",
-        "./images/projects/movix/img3.png",
-        "./images/projects/movix/img4.png",
-        "./images/projects/movix/img5.png"
+        "https://i.ibb.co/TMK2hwc/img1.png",
+        "https://i.ibb.co/X8SH1gM/img2.png",
+        "https://i.ibb.co/vjFWVkF/img3.png",
+        "https://i.ibb.co/wNkSNS0/img4.png",
+        "https://i.ibb.co/99HWLdF/img5.png"
       ],
       "codeLink": "https://github.com/monasefdev",
       "liveLink": "https://toptools.tech/"
-    },
-    {
-      "id": 2,
-      "title": "_dance-school",
-      "description": "Discover the artistry of dance at our vibrant dance school...",
-      "detail": "Discover the artistry of dance at our vibrant dance school, offering a wide range of classes for all ages and skill levels. Experience the joy of movement and expression through our dance school's expert instruction, nurturing a passion for dance in a supportive and inclusive environment. admin-email:admin@danceschool.com, password:Admin@626456",
-      "img": "/images/projects/dance-school.jpg",
-      "tech": ["Vue"],
-      "url": "https://github.com/",
-      "features": [
-        "navigation",
-        "home-page",
-        "all-instructor",
-        "apply-classes",
-        "dashboard",
-        "authentication"
-      ],
-      "images": [
-        "https://i.ibb.co/j6jcjx9/dance-school-banner.png",
-        "https://i.ibb.co/tHFTW9N/dance-school-popular-Class.png",
-        "https://i.ibb.co/s1rXpvv/dance-school-popular-Insturctor.png",
-        "https://i.ibb.co/qJhNsqK/dance-school-signin.png",
-        "https://i.ibb.co/60w6pL8/dance-school-payment.png",
-        "https://i.ibb.co/jJ8Q5NZ/dance-school-Dashboard.png"
-      ],
-      "codeLink": "https://github.com/mahamudulhasan-me/dance-school.git",
-      "liveLink": "https://dance-school-6fa61.web.app"
-    }
-  ],
-  "restProject": [
-    {
-      "id": 1,
-      "title": "_ui-animations",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "images/projects/ui-animations2.png",
-      "tech": ["Flutter"],
-      "url": "https://github.com/"
-    },
-    {
-      "id": 2,
-      "title": "_ai-resources",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "/images/projects/ai-resources.png",
-      "tech": ["Gatsby"],
-      "url": "https://github.com/"
-    },
-    {
-      "id": 3,
-      "title": "_worldmap",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "/images/projects/worldmap.png",
-      "tech": ["Angular"],
-      "url": "https://github.com/"
-    },
-    {
-      "id": 4,
-      "title": "_ui-animations",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "/images/projects/ui-animations.png",
-      "tech": ["React"],
-      "url": "https://github.com/"
-    },
-    {
-      "id": 5,
-      "title": "_tetris-game",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "/images/projects/tetris-game.png",
-      "tech": ["React"],
-      "url": "https://github.com/"
-    },
-    {
-      "id": 6,
-      "title": "_ethereum",
-      "description": "Duis aute irure dolor in velit esse cillum dolore.",
-      "img": "/images/projects/ethereum.png",
-      "tech": ["Vue"],
-      "url": "https://github.com/"
     }
   ]
 }
