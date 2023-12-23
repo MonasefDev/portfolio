@@ -7,9 +7,12 @@ import About from "./pages/About/About";
 import Projects from "./pages/projects/Projects";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import Contact from "./pages/Contact/Contact";
+import { useAosAnimation } from "./hooks/useAosAnimation";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useAosAnimation();
 
   return (
     <>

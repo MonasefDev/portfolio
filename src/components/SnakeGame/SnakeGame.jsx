@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const GRID_SIZE = 13;
+const GRID_WIDTH = 13;
+const GRID_HEIGHT = 17;
 const CELL_SIZE = 19;
 const INITIAL_SNAKE = [
   { x: 2, y: 10 },
@@ -10,15 +11,17 @@ const INITIAL_SNAKE = [
 const INITIAL_DIRECTION = "up";
 const INITIAL_APPLE = { x: 5, y: 6 };
 
-const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
+const SnakeGame = ({
+  isGameOver,
+  isPaused,
+  setPlayGame,
+  setEatenApples,
+  eatenApples,
+}) => {
   const [snake, setSnake] = useState(INITIAL_SNAKE);
   const [direction, setDirection] = useState(INITIAL_DIRECTION);
   const [apple, setApple] = useState(INITIAL_APPLE);
   const [gameOver, setGameOver] = useState(false);
-  const [isGameOverSoundPlayed, setIsGameOverSoundPlayed] = useState(false);
-
-  isGameOver(gameOver);
-
   useEffect(() => {
     const interval = setInterval(moveSnake, 150);
     document.addEventListener("keydown", handleKeyDown);
@@ -27,13 +30,7 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
       clearInterval(interval);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [snake, direction, apple]);
-
-  useEffect(() => {
-    if (gameOver && !isGameOverSoundPlayed) {
-      setIsGameOverSoundPlayed(true);
-    }
-  }, [gameOver, isGameOverSoundPlayed]);
+  }, [snake, direction, apple, isPaused]);
 
   const handleKeyDown = (event) => {
     const key = event.key.toLowerCase();
@@ -44,23 +41,23 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
   };
 
   const moveSnake = () => {
-    if (gameOver) {
+    if (gameOver || isPaused) {
       return;
     }
 
     const head = { ...snake[0] };
     switch (direction) {
       case "up":
-        head.y = (head.y - 1 + GRID_SIZE) % GRID_SIZE;
+        head.y = (head.y - 1 + GRID_HEIGHT) % GRID_HEIGHT;
         break;
       case "down":
-        head.y = (head.y + 1) % GRID_SIZE;
+        head.y = (head.y + 1) % GRID_HEIGHT;
         break;
       case "left":
-        head.x = (head.x - 1 + GRID_SIZE) % GRID_SIZE;
+        head.x = (head.x - 1 + GRID_WIDTH) % GRID_WIDTH;
         break;
       case "right":
-        head.x = (head.x + 1) % GRID_SIZE;
+        head.x = (head.x + 1) % GRID_WIDTH;
         break;
       default:
         break;
@@ -70,6 +67,8 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
 
     if (isSnakeCollision(newSnake) || isBoundaryCollision(head)) {
       setGameOver(true);
+      isGameOver(true);
+      setPlayGame(false);
       return;
     }
 
@@ -90,20 +89,20 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
 
   const isBoundaryCollision = (head) => {
     return (
-      head.x < 0 || head.x >= GRID_SIZE || head.y < 0 || head.y >= GRID_SIZE
+      head.x < 0 || head.x >= GRID_WIDTH || head.y < 0 || head.y >= GRID_HEIGHT
     );
   };
 
   const getRandomApplePosition = (newSnake) => {
     const availableCells = Array.from(
-      Array(GRID_SIZE * GRID_SIZE).keys(),
+      Array(GRID_WIDTH * GRID_HEIGHT).keys(),
     ).filter(
-      (cell) => !newSnake.some((part) => part.x + part.y * GRID_SIZE === cell),
+      (cell) => !newSnake.some((part) => part.x + part.y * GRID_WIDTH === cell),
     );
     const randomCell =
       availableCells[Math.floor(Math.random() * availableCells.length)];
-    const x = randomCell % GRID_SIZE;
-    const y = Math.floor(randomCell / GRID_SIZE);
+    const x = randomCell % GRID_WIDTH;
+    const y = Math.floor(randomCell / GRID_WIDTH);
     return { x, y };
   };
 
@@ -127,19 +126,19 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
       position: "relative",
     };
 
-    const appleClass = isApple ? "animate-ping" : "";
+    // const appleClass = isApple ? "animate-ping" : "";
 
-    const appleStyle = {
-      width: "80%",
-      height: "80%",
-      backgroundColor: isApple ? "#43D9AD" : "",
-      borderRadius: isApple ? "50%" : "0",
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      zIndex: isApple ? "1" : "auto",
-    };
+    // const appleStyle = {
+    //   width: "80%",
+    //   height: "80%",
+    //   backgroundColor: isApple ? "#43D9AD" : "",
+    //   borderRadius: isApple ? "50%" : "0",
+    //   position: "absolute",
+    //   top: "50%",
+    //   left: "50%",
+    //   transform: "translate(-50%, -50%)",
+    //   zIndex: isApple ? "1" : "auto",
+    // };
 
     const tailStyle = {
       backgroundColor: isSnake ? "#43D9AD" : "",
@@ -174,14 +173,15 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
     };
 
     return (
-      <div key={`${row}-${col}`} style={cellStyle}>
+      <div
+        className="flex items-center justify-center"
+        key={`${row}-${col}`}
+        style={cellStyle}
+      >
         {isApple && (
-          <span
-            className={`relative flex h-3 w-3 ${appleClass}`}
-            style={appleStyle}
-          >
-            <span className="absolute inline-flex h-full w-full animate-ping items-center justify-center rounded-full bg-[#43D9AD] opacity-75"></span>
-            <span className="relative inline-flex h-3 w-3 rounded-full bg-[#43D9AD]"></span>
+          <span className="relative flex h-4 w-4">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-codeline-name opacity-75"></span>
+            <span className="relative inline-flex h-4 w-4 rounded-full bg-codeline-name"></span>
           </span>
         )}
         {isSnake && !(row === snake[0].y && col === snake[0].x) && (
@@ -196,21 +196,16 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
     );
   };
 
-  const playSound = (sound) => {
-    const audio = new Audio(sound);
-    audio.play();
-  };
-
-  const grid = Array.from({ length: GRID_SIZE }, (_, row) =>
-    Array.from({ length: GRID_SIZE }, (_, col) => renderCell(row, col)),
+  const grid = Array.from({ length: GRID_HEIGHT }, (_, row) =>
+    Array.from({ length: GRID_WIDTH }, (_, col) => renderCell(row, col)),
   );
 
   return (
-    <div className="">
+    <div>
       {gameOver ? (
         <div
           style={{ background: "rgba(1, 22, 39, 0.84)" }}
-          className="text-a2 absolute bottom-36 left-9 right-[13.2rem] py-2 text-center text-2xl uppercase"
+          className="absolute bottom-36 left-9 right-[13.2rem] py-2 text-center text-2xl uppercase text-codeline-name"
         >
           Game Over!
         </div>
@@ -218,7 +213,7 @@ const SnakeGame = ({ isGameOver, setEatenApples, eatenApples }) => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: `repeat(${GRID_SIZE}, ${CELL_SIZE}px)`,
+            gridTemplateColumns: `repeat(${GRID_WIDTH}, ${CELL_SIZE}px)`,
           }}
         >
           {grid}

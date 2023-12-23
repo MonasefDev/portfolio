@@ -27,6 +27,7 @@ module.exports = {
         greenfy: "#43D9AD",
         "bluefy-dark": "#011627",
         purplefy: "#5565E8",
+        a1: "#FEA55F",
       },
       fontFamily: {
         fira_light: "Fira Code Light",

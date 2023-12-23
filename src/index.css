@@ -17,6 +17,10 @@ html {
   padding: 30px;
 }
 
+.arrow-btn {
+  @apply mx-auto flex h-8 w-12 items-center justify-center rounded-lg bg-gray-dark text-white;
+}
+
 body {
   height: 100%;
   width: 100%;
