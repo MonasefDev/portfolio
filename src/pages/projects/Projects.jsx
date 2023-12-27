@@ -5,6 +5,7 @@ import dev from "../../developer.json";
 import ModalProject from "../../components/modalProject/ModalProject";
 import { Helmet } from "react-helmet";
 import Img from "../../components/Img";
+import { useNavigate } from "react-router-dom";
 function Projects({ isMenuOpen }) {
   const techs = ["React", "HTML", "CSS", "Vue", "Angular", "Gatsby", "Flutter"];
   const [checkedValue, setCheckedValue] = useState([]);
@@ -12,6 +13,7 @@ function Projects({ isMenuOpen }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const history = useNavigate();
 
   const handleChange = (event) => {
     const { value, checked } = event.target;
@@ -67,7 +69,7 @@ function Projects({ isMenuOpen }) {
             id="filter-menu"
             className={`border-right ${
               isOpen ? "" : "hidden"
-            }  w-full flex-col font-fira_regular text-menu-text lg:flex`}
+            }  relative w-full flex-col items-center  font-fira_regular text-menu-text lg:flex`}
           >
             {/* <!-- title --> */}
             <div
@@ -103,6 +105,14 @@ function Projects({ isMenuOpen }) {
                 );
               })}
             </nav>
+
+            <button
+              id="view-button"
+              onClick={() => history("/add-project")}
+              className="absolute bottom-4 left-2 right-2 cursor-pointer rounded-sm px-4 py-2 font-fira_retina text-xs text-white"
+            >
+              add project
+            </button>
           </div>
           {/*   <!-- content --> */}
 

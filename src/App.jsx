@@ -8,6 +8,8 @@ import Projects from "./pages/projects/Projects";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import Contact from "./pages/Contact/Contact";
 import { useAosAnimation } from "./hooks/useAosAnimation";
+import AddProject from "./pages/add-project/AddProject";
+// import Login from "./pages/login/Login";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,10 +22,12 @@ function App() {
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <Routes>
           <Route index element={<Home isMenuOpen={isMenuOpen} />} />
+          <Route path="about-me" element={<About isMenuOpen={isMenuOpen} />} />
+          {/* <Route path="login" element={<Login isMenuOpen={isMenuOpen} />} /> */}
           <Route
-            path="about-me"
-            element={<About isMenuOpen={isMenuOpen} />}
-          ></Route>
+            path="add-project"
+            element={<AddProject isMenuOpen={isMenuOpen} />}
+          />
           <Route
             path="projects"
             element={<Projects isMenuOpen={isMenuOpen} />}
